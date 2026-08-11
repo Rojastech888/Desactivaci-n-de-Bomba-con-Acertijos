@@ -1,0 +1,144 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.room-container {
+    width: 650px;
+    height: 520px;
+    background: linear-gradient(to bottom, #161b22, #0d1117);
+    border: 4px solid #30363d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.top-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background: #21262d;
+    border-bottom: 2px solid #30363d;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#timer-display {
+    color: #ff7b72;
+    font-size: 1.3rem;
+    background: #0d1117;
+    padding: 4px 10px;
+    border: 2px solid #ff7b72;
+    border-radius: 4px;
+}
+
+.bomb-station {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.bomb-casing {
+    width: 90%;
+    background: #1f242c;
+    border: 6px solid #484f58;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.screen-panel {
+    background: #0d1117;
+    border: 3px solid #ff7b72;
+    padding: 15px;
+    min-height: 70px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#riddle-question {
+    color: #f0f6fc;
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.options-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-btn {
+    background: #21262d;
+    color: #c9d1d9;
+    border: 2px solid #58a6ff;
+    padding: 10px 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: #58a6ff;
+    color: #0d1117;
+    font-weight: bold;
+}
+
+.option-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mesa y Brazos en primer plano */
+.desk-surface {
+    height: 75px;
+    background: #795548;
+    border-top: 6px solid #4e342e;
+    position: relative;
+    width: 100%;
+}
+
+.arm {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 65px;
+    background: #8d5524;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: inset 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.left-arm {
+    left: 45px;
+    transform: rotate(12deg);
+}
+
+.right-arm {
+    right: 45px;
+    transform: rotate(-12deg);
+}
