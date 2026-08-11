@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BOMB DEFUSE: MESA TÁCTICA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="room-container">
+        <!-- Pantalla Superior / Estado -->
+        <div class="top-screen">
+            <div id="level-display">NIVEL: 1 (FÁCIL)</div>
+            <div id="timer-display">00:30</div>
+        </div>
+
+        <!-- Estación de la Bomba en el centro -->
+        <div class="bomb-station">
+            <div class="bomb-casing">
+                <div class="screen-panel">
+                    <h3 id="riddle-question">Cargando acertijo...</h3>
+                </div>
+                <div class="options-panel">
+                    <button class="option-btn" id="btn-a" onclick="checkAnswer(0)">A) ...</button>
+                    <button class="option-btn" id="btn-b" onclick="checkAnswer(1)">B) ...</button>
+                    <button class="option-btn" id="btn-c" onclick="checkAnswer(2)">C) ...</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mesa y Brazos en primer plano -->
+        <div class="desk-surface">
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
